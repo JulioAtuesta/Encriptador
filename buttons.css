@@ -1,0 +1,28 @@
+.encriptador__keys-button{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 15%;
+}
+
+
+#encriptador__input-encriptar{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 40%;
+}
+
+#encriptador__input-desencriptar{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 40%;
+}
+
+#encriptador__output-copiar{
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    width: 80%;
+}
