@@ -1,0 +1,11 @@
+#encriptador__output{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 30px;
+    width: 40%;
+    max-width: 600px;
+    min-width: 330px;   
+}
