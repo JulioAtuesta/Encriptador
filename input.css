@@ -24,8 +24,8 @@
 }
 
 #encriptador__input-text::placeholder{
-    font-weight: bolder;
-    font-size: larger;
+    font-size:3rem;
     text-align: center;
     vertical-align: middle;
+    opacity: 0.6;
 }
