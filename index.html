@@ -10,38 +10,38 @@
     <link rel="stylesheet" href="output.css">
     <title>Encriptador</title>
 </head>
+
 <body>
     <main>
-    <section id="encriptador">
-        <section id="encriptador__keys">
-            <button class="encriptador__keys-button" type="submit">Key 1</button>
-            <button class="encriptador__keys-button" type="submit">Key 2</button>
-            <button class="encriptador__keys-button" type="submit">Key 3</button>
-            <button class="encriptador__keys-button" type="submit">Key 4</button>
-            <button class="encriptador__keys-button" type="submit">Key 5</button>
-            <button class="encriptador__keys-button" type="submit">Key 6</button>
-        </section>
-        <section id="encriptador__contenedor">
-            <section id="encriptador__input">
-                <textarea id="encriptador__input-text" rows="20" cols="30" placeholder="¡Ingrese texto a encriptar!"></textarea>
-                <button id="encriptador__input-encriptar">Encriptar</button>
-                <button id="encriptador__input-desencriptar">Desencriptar</button>
+        <section id="encriptador">
+            <section id="encriptador__keys">
+                <button class="encriptador__button" type="button">Key 1</button>
+                <button class="encriptador__button" type="button">Key 2</button>
+                <button class="encriptador__button" type="button">Key 3</button>
+                <button class="encriptador__button" type="button">Key 4</button>
+                <button class="encriptador__button" type="button">Key 5</button>
+                <button class="encriptador__button" type="button">Key 6</button>
             </section>
-            <section id="encriptador__output">
-                <p id="encriptador__output-texto">Texto encriptado 
-                    I recommend to use both. Rows and cols are required and useful if the client does not support CSS. But as a designer I overwrite them to get exactly the size I wish.
-
-The recommended way to do itstylesheet e.g.I recommend to use both. Rows and cols are required and useful if the client does not support CSS. But as a designer I overwrite them to get exactly the size I wish.
-
-
-
-                </p>
-                <button id="encriptador__output-copiar">Copiar Texto</button>
+            <section id="encriptador__contenedor">
+                <section id="encriptador__input">
+                    <form id="encriptador__form">
+                    <textarea id="encriptador__input-text" name ="textoEntrada" rows="20" cols="30" placeholder="¡Ingrese texto a encriptar!"required></textarea>
+                    <button id="encriptador__input-encriptar" class="encriptador__button"
+                        type="button">Encriptar</button>
+                    <button id="encriptador__input-desencriptar" class="encriptador__button"
+                        type="button">Desencriptar</button>
+                    </form>
+                </section>
+                <section id="encriptador__output">
+                    <p id="encriptador__output-texto">Texto encriptado</p>
+                    <button id="encriptador__output-copiar" class="encriptador__button" type="button">Copiar
+                        Texto</button>
+                </section>
             </section>
         </section>
-    </section>
     </main>
     <footer></footer>
+    <script src="encriptador.js"></script>
 </body>
 
 </html>
