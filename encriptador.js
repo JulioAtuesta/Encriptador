@@ -29,7 +29,9 @@ function desEncroptar(){
 
 }
 
-function copiarTexto(){}
+function copiarTexto(){
+    
+}
 
 function validacion(texto){
     console.log(typeof(texto) +' '+ texto);
