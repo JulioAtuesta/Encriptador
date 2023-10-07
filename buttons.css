@@ -1,19 +1,19 @@
 button{
     font-weight: bold;
     text-align: center;
-    transform: scaleY(1.2);
+    border-radius: 10px;
+    transform: scaleY(1.3);
     cursor: pointer;
-    background-color: rgb(214, 220, 239);
+    background-color: rgb(255, 255, 255);
 }
 
 .encriptador__button:hover{
-    background-color: rgb(200, 208, 237);
-    transition: 0.25s;
+    background-color: rgb(229, 233, 250);
+    transition: 0.35s;
 }
 
 .encriptador__button{
     padding: 5px;
-    border-radius: 5px;
     border: none;
     width: 15%;
 }
@@ -21,7 +21,6 @@ button{
 
 #encriptador__input-encriptar{
     padding: 5px;
-    border-radius: 5px;
     border: none;
     width: 40%;
     transform: scale(1.2);
@@ -29,7 +28,6 @@ button{
 
 #encriptador__input-desencriptar{
     padding: 5px;
-    border-radius: 5px;
     border: none;
     width: 40%;
     transform: scale(1.2);
@@ -37,7 +35,6 @@ button{
 
 #encriptador__output-copiar{
     padding: 5px;
-    border-radius: 5px;
     border: none;
     width: 80%;
     transform: scale(1.2);
@@ -45,6 +42,6 @@ button{
 }
 
 button:hover{
-    background-color: rgb(200, 208, 237);
+    background-color: rgb(229, 233, 250);
     transition: 0.25s;
 }

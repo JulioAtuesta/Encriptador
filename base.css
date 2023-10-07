@@ -22,8 +22,8 @@ time, mark, audio, video {
 main{
     background-image: linear-gradient(
         0deg,
-        rgba(11, 10, 11, 0.541) 11.2%,
-        rgba(248, 143, 248, 0.468) 100.2%
+        rgba(0, 0, 0, 0.322) 11.2%,
+        rgba(241, 187, 241, 0.288) 100.2%
         );
         max-height: 100%;
         max-width: 100%;
