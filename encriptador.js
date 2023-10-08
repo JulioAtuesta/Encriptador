@@ -1,18 +1,23 @@
+/* Encriptador, basado en el challenge #1 del programa Oracle one */
+
+const dickyDick = {a:'ai', e:'enter', i:'imes', o:'ober', u:'ufat'}
+const dicky = {ai:'a', enter:'e', imes:'i', ober:'o', ufat:'u'}
+
 function main() {
-    const submit = document.getElementById('encriptador__input-encriptar');
-    submit.addEventListener('click',encriptar); 
+    const encriptarButton = document.getElementById('encriptador__input-encriptar');
+    encriptarButton.addEventListener('click',encriptar); 
+    const desEncriptarButton = document.getElementById('encriptador__input-desencriptar');
+    desEncriptarButton.addEventListener('click',desEncriptar); 
 }
 
-
 function encriptar(){
-    const dickyDick = {a:'ai', e:'enter', i:'imes', o:'ober', u:'ufat'}
     const texto = document.getElementById('encriptador__input-text');
-    const textoBase = texto.value;
+    const textoBase = texto.value.toLowerCase();
     if(textoBase === ""){
         return (0)
     }
     if(validacion(textoBase)){ 
-        let textoEncriptado ='';
+        let textoEncriptado ='';//en js las strings son como tuplas no se puede modificar una posicion existente pero pueden añadirse posiciones nuevas
         for(let i=0; i<textoBase.length; i++){
             let key = textoBase[i];
             if(Object.keys(dickyDick).includes(key)){
@@ -25,23 +30,48 @@ function encriptar(){
     }      
 }
 
-function desEncroptar(){
-
-}
-
-function copiarTexto(){
+function desEncriptar(){ //hay codigo que se repite se optimiza luego
+    console.log('desEncriptar');
+    const encriptado = document.getElementById('encriptador__output-texto');
+    let textoEncriptado = encriptado.innerText;
+    console.log(textoEncriptado);
+    console.log(dickyDick);
+    //* acceder a la clave de un objeto conociendo su valor 
+    if(textoEncriptado === "Texto encriptado"){
+        console.log('return 0')
+        return (0)
+    }
+    let textoDesencriptado =''; //* usar una expresion regular para enontrar la clave completa?
+        for(let i=0; i<textoEncriptado.length; i++){//*puede funcionar pero ta muy feo
+            let key = textoEncriptado[i];
+            console.log(key);   
+            if(key == 'a'){
+                i+=1; //*'a:ai', e:'enter', i:'imes', o:'ober', u:'ufat
+            }else if(key == 'e'){
+                i+=4;
+            }else if(key == 'i' || key == 'o' || key == 'u'){
+                i+=3;
+            }
+            textoDesencriptado += key; 
+        }
+        mostrar(textoDesencriptado);
     
 }
 
+function copiarTexto(){
+
+}
+
 function validacion(texto){
-    console.log(typeof(texto) +' '+ texto);
-    const invalidos = /[A-Z0-9ÁÉÍÓÚÜÑ¡¿@#$%^&*()_+={}[\]:;"'<>,.?\\/]/; // el - representa un espacio vacio cuando no se usa en un rango e.g [a-g]
+    const invalidos = /[0-9ÁÉÍÓÚÜ¡¿@#$%^&*()_+={}[\]:;"'<>,.?\\/]/; // el - representa un espacio vacio cuando no se usa en un rango e.g [a-g]
     return !invalidos.test(texto);
 }
 
 function mostrar(textoEncriptado){
     const encriptado = document.getElementById('encriptador__output-texto');
     encriptado.innerText = textoEncriptado;
+
+    //* la fuente es diferente en el texto de entrada y el de salida 
 }
 
 window.addEventListener('load', main)
