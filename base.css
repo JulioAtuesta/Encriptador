@@ -26,7 +26,7 @@ body{
         rgba(241, 187, 241, 0.288) 100.2%
         );
         background-repeat: no-repeat;
-    }
+}
 
 #encriptador{
     display: flex;
@@ -37,7 +37,7 @@ body{
     width: 100vw;
     height: 100vh;
     /*con esta altura vh hay problema cuando 
-    el contenido del texto traduciod es muy grande,
+    el contenido del texto traducido es muy grande,
     se sale del fondo*/
     max-height: 100%;
     max-width: 100%;
@@ -62,11 +62,13 @@ body{
     flex-wrap: wrap;
     gap: 30px;
     /* para centrar el contenedor verticalmente*/
-    width: 100vw; 
 }
 
 #encriptador__input{
-    height: 100%;
+    height: 100%;    
+}
+#encriptador__form{
+    height: 100%;    
 }
 
 #encriptador__output{
@@ -77,6 +79,13 @@ body{
     #encriptador{
     height: 100vh; 
     margin: 0;
+    }
+    #encriptador__input{
+        width: 30%;
+    }
+    
+    #encriptador__output{
+        width: 30%;
     }
 }
 
