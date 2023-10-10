@@ -4,11 +4,11 @@ button{
     border-radius: 10px;
     transform: scaleY(1.3);
     cursor: pointer;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(243, 236, 224);
 }
 
 .encriptador__button:hover{
-    background-color: rgb(229, 233, 250);
+    background-color: rgb(253, 242, 224);
     transition: 0.35s;
 }
 
@@ -42,6 +42,6 @@ button{
 }
 
 button:hover{
-    background-color: rgb(229, 233, 250);
+    background-color: rgb(253, 242, 224);
     transition: 0.25s;
 }
