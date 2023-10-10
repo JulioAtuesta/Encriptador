@@ -19,18 +19,13 @@ time, mark, audio, video {
 	vertical-align: baseline;
 }
 
-main{
+body{
     background-image: linear-gradient(
         0deg,
         rgba(0, 0, 0, 0.322) 11.2%,
         rgba(241, 187, 241, 0.288) 100.2%
         );
-        max-height: 100%;
-        max-width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-content:flex-start;
-        flex-direction: column;
+        background-repeat: no-repeat;
     }
 
 #encriptador{
@@ -70,6 +65,13 @@ main{
     width: 100vw; 
 }
 
+#encriptador__input{
+    height: 100%;
+}
+
+#encriptador__output{
+    height: 100%;
+}
 
 @media (min-width:700px) { /* para las pantallas mayores a*/
     #encriptador{
