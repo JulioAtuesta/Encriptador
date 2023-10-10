@@ -1,13 +1,14 @@
 /* Encriptador, basado en el challenge #1 del programa Oracle one */
 
 const dickyDick = {a:'ai', e:'enter', i:'imes', o:'ober', u:'ufat'}
-const dicky = {ai:'a', enter:'e', imes:'i', ober:'o', ufat:'u'}
 
 function main() {
     const encriptarButton = document.getElementById('encriptador__input-encriptar');
     encriptarButton.addEventListener('click',encriptar); 
     const desEncriptarButton = document.getElementById('encriptador__input-desencriptar');
     desEncriptarButton.addEventListener('click',desEncriptar); 
+    const copiarButton = document.getElementById('encriptador__output-copiar');
+    copiarButton.addEventListener('click',copiarTexto);
 }
 
 function encriptar(){
@@ -41,8 +42,8 @@ function desEncriptar(){ //hay codigo que se repite se optimiza luego
         console.log('return 0')
         return (0)
     }
-    let textoDesencriptado =''; //* usar una expresion regular para enontrar la clave completa?
-        for(let i=0; i<textoEncriptado.length; i++){//*puede funcionar pero ta muy feo
+    let textoDesencriptado =''; 
+        for(let i=0; i<textoEncriptado.length; i++){//*funciona pero ta feo
             let key = textoEncriptado[i];
             console.log(key);   
             if(key == 'a'){
@@ -59,6 +60,14 @@ function desEncriptar(){ //hay codigo que se repite se optimiza luego
 }
 
 function copiarTexto(){
+    const encriptado = document.getElementById('encriptador__output-texto');
+    navigator.clipboard.writeText(encriptado.innerText)
+        .then(() => {
+    console.log('Texto copiado al portapapeles')
+    })
+    .catch(err => {
+    console.error('Error al copiar al portapapeles:', err)
+  })
 
 }
 
