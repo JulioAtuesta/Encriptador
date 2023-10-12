@@ -40,6 +40,9 @@
     height: 100vh; 
     margin: 0;
     }
+    #encriptador__contenedor{
+        gap: 50px;
+    }
 }
 
 @media (max-width:330px) {/* para las pantallas menores a */

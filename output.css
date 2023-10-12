@@ -10,6 +10,12 @@
     height: 100%;   
 }
 
+#encriptador__output-texto{
+    max-width: 330px;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
 @media (min-width:700px) { /* para las pantallas mayores a*/
     #encriptador__output{
         width: 30%;

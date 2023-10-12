@@ -1,3 +1,21 @@
 .barras{
-    background-color: rgb(8, 20, 53);
+    /* background-color: rgb(8, 20, 53); */
+    display: flex;
+}
+
+.nav__img{
+    margin: 0 auto;  
+    transform: scale(0.7);  
+}
+
+.nav__img:hover{
+    transform: scale(0.8);
+    transition: 0.4s;
+} 
+
+.footer__img{
+    transform: scale(0.3);  
+    display: flex;
+    justify-content: end;
+    align-self: flex-end;
 }
