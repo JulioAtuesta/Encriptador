@@ -14,7 +14,7 @@
 } 
 
 .footer__img{
-    transform: scale(0.3);  
+    transform: scale(0.4);  
     display: flex;
     justify-content: end;
     align-self: flex-end;
